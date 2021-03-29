@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml and config file may be used to install only certain pieces of it, such as Filebeat.
 
-  - https://github.com/lindseytwilson/Project-1/blob/main/Ansible/filebeat-playbook.yml
+  - ![Ansible Playbooks & Configuration Files] (https://github.com/lindseytwilson/Project-1/tree/main/Ansible)
 
 This document contains the following details:
 - Description of the Topology
@@ -25,8 +25,8 @@ Load balancing ensures that the application will be highly stable, in addition t
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log and system files.
-- Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- What does Filebeat watch for? Filebeat watches for log files and log events.
+- What does Metricbeat record? Metricbeat records the metrics and statistics from the operating system and services running on the server.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -37,7 +37,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web1      | Client   | 10.0.0.5   | Linux            |
 | Web2      | Client   | 10.0.0.6   | Linux            |
 | Web3      | Client   | 10.0.0.7   | Linux            |
-| ELK Server| Gateway  | 10.1.0.4   | Linux            |
+| ELK Server| Client   | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
@@ -51,11 +51,15 @@ Machines within the network can only be accessed by _____.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses                   |
-|----------|---------------------|----------------------------------------|
-| Jump Box | Yes                 | 10.0.0.5 10.0.0.6 10.0.0.7 10.1.0.4    |
-|          |                     |                      |
-|          |                     |                      |
+| Name     | Publicly Accessible | Allowed IP Addresses |
+|----------|---------------------|----------------------|
+| Jump Box | Yes                 | 40.76.66.93          |
+| ELK      | No                  | 10.0.1.4             |
+| Web1     | No                  | 10.0.0.5             |
+| Web2     | No                  | 10.0.0.6             |
+| Web3     | No                  | 10.0.0.7             |
+
+
 
 ### Elk Configuration
 
