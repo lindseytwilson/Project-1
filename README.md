@@ -2,9 +2,9 @@
 
 The files in this repository were used to configure the network depicted below.
 
-[ELK Stack Topology](https://github.com/lindseytwilson/Project-1/blob/main/Diagrams/ELK%20Stack%20Topology.png)
+![ELK Stack Topology](https://github.com/lindseytwilson/Project-1/blob/main/Diagrams/ELK%20Stack%20Topology.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml and config file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. Alternatively, select portions of the yml and config file may be used to install only certain pieces of it, such as Filebeat.
 
   - [Ansible Playbooks & Configuration Files](https://github.com/lindseytwilson/Project-1/tree/main/Ansible)
 
@@ -21,15 +21,19 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly stable, in addition to restricting traffic to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly available, in addition to restricting traffic to the network.
+- What aspect of security do load balancers protect?
+	- Load balancers help defend against denial-of-service attacks by shifting traffic to another web server if one goes down.
+- What is the advantage of a jump box?_
+	- Increased security, controlled access and separation between user's workstations and assets within the network.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log and system files.
-- What does Filebeat watch for? Filebeat watches for log files and log events.
-- What does Metricbeat record? Metricbeat records the metrics and statistics from the operating system and services running on the server.
+- What does Filebeat watch for?
+	- Filebeat monitors log files and log events and sends the information to Elasticsearch or Logstash for indexing.
+- What does Metricbeat record?
+	- Metricbeat records the metrics and statistics from the operating system and services running on the server.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name      | Function | IP Address | Operating System |
 |-----------|----------|------------|------------------|
@@ -37,7 +41,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web1      | Client   | 10.0.0.5   | Linux            |
 | Web2      | Client   | 10.0.0.6   | Linux            |
 | Web3      | Client   | 10.0.0.7   | Linux            |
-| ELK Server| Client   | 10.1.0.4   | Linux            |
+| ELK Server| Server   | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
@@ -47,17 +51,18 @@ Only the JumpBox machine can accept connections from the Internet. Access to thi
 - Whitelisted IP addresses: Host machine public IP address
 
 Machines within the network can only be accessed by ssh into JumpBox.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- Which machine did you allow to access your ELK VM? What was its IP address?
+	- JumpBox via 10.0.0.4:22
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses          |
-|----------|---------------------|-------------------------------|
-| JumpBox  | Yes                 | Host machine public IP via SSH|
-| ELK      | No                  | 10.0.1.4                      |
-| Web1     | No                  | 10.0.0.5                      |
-| Web2     | No                  | 10.0.0.6                      |
-| Web3     | No                  | 10.0.0.7                      |
+| Name      | Publicly Accessible | Allowed IP Addresses          |
+|-----------|---------------------|-------------------------------|
+| JumpBox   | Yes                 | Host machine public IP via SSH|
+| Web1      | No                  | 10.0.0.4                      |
+| Web2      | No                  | 10.0.0.4                      |
+| Web3      | No                  | 10.0.0.4                      |
+| ELK Server| No                  | 10.0.0.4                      |
 
 
 
