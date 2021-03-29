@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml and config file may be used to install only certain pieces of it, such as Filebeat.
 
-  - Ansible Playbooks & Configuration Files https://github.com/lindseytwilson/Project-1/tree/main/Ansible
+  - Ansible Playbooks & Configuration Files: https://github.com/lindseytwilson/Project-1/tree/main/Ansible
 
 This document contains the following details:
 - Description of the Topology
@@ -43,21 +43,21 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the JumpBox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- Whitelisted IP addresses: Host machine public IP address
 
-Machines within the network can only be accessed by _____.
+Machines within the network can only be accessed by ssh into JumpBox.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes                 | 40.76.66.93          |
-| ELK      | No                  | 10.0.1.4             |
-| Web1     | No                  | 10.0.0.5             |
-| Web2     | No                  | 10.0.0.6             |
-| Web3     | No                  | 10.0.0.7             |
+| Name     | Publicly Accessible | Allowed IP Addresses          |
+|----------|---------------------|-------------------------------|
+| JumpBox  | Yes                 | Host machine public IP via SSH|
+| ELK      | No                  | 10.0.1.4                      |
+| Web1     | No                  | 10.0.0.5                      |
+| Web2     | No                  | 10.0.0.6                      |
+| Web3     | No                  | 10.0.0.7                      |
 
 
 
