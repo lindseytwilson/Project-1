@@ -94,8 +94,10 @@ We have installed the following Beats on these machines:
 	- ELK Server
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
-
+- Filebeat collects log events
+	- [Example Filebeat Data]()
+- Mectricbeat collects metrics and system statistics 
+	- [Example Metricbeat Data]()
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
@@ -106,16 +108,14 @@ SSH into the control node and follow the steps below:
 	- 10.0.0.6 ansible_python_interpreter=/usr/bin/python3
 	- 10.0.0.7 ansible_python_interpreter=/usr/bin/python3
 - To run the playbook
-	- Run: ansible-playbook <playbook name>
+	- Run: ansible-playbook playbook-name.yml
 	- Navigate to RedAdmin@10.0.0.5
 	- Run: curl localhost/setup.php (checks to see that the installation worked as expected)
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?
+- Which file is the playbook? Where do you copy it?
 	- ansible-playbook.yml
 	- This playbook file gets copied to the /etc/ansible directory
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+- Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
+	- The hosts file is used update to make ansible run on a specific machine. You specify which machine to install the ELK server on by adding the ELK Server IP address.
 - Which URL do you navigate to in order to check that the ELK server is running?
 	- The public IP address on the ELK Server via port 5601 (138.91.155.137:5601)
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
