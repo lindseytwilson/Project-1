@@ -65,17 +65,19 @@ A summary of the access policies in place can be found in the table below.
 | Web3      | No                  | 10.0.0.4                      |
 | ELK Server| No                  | 10.0.0.4                      |
 
-
-
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because is is flexible, agentless, and efficient. Ansible allows you to arrange an entire application environment no matter where it is deployed and it can also be customized based on your needs. You also don't need to set up a separate management structure, and you don't need to install any extra software. Lastly, no custom code is needed to automate the systems.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Specify the elk machines and RedAdmin user
+()
+- Install: docker.io, python3-pip, docker
+()
+- Increase system memory
+()
+- Launch the docker elk container with the following exposed ports: 5601, 9200, 5044
+()
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
