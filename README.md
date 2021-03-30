@@ -74,7 +74,7 @@ The playbook implements the following tasks:
 - Install: docker.io, python3-pip, docker
 - Increase system memory
 - Launch the docker elk container with the following exposed ports: 5601, 9200, 5044
-- ![Full Ansible Playbook](https://github.com/lindseytwilson/Project-1/blob/main/Ansible/ansible-playbook.yml)
+![Full Ansible Playbook](https://github.com/lindseytwilson/Project-1/blob/main/Ansible/ansible-playbook.yml)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
