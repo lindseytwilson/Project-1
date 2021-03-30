@@ -71,10 +71,10 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 - Specify the elk machines and RedAdmin user
-- Install: docker.io, python3-pip, docker
+- Install docker.io, python3-pip, and docker
 - Increase system memory
 - Launch the docker elk container with the following exposed ports: 5601, 9200, 5044
-![Full Ansible Playbook](https://github.com/lindseytwilson/Project-1/blob/main/Ansible/ansible-playbook.yml)
+- [Full Ansible Playbook](https://github.com/lindseytwilson/Project-1/blob/main/Ansible/ansible-playbook.yml)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
