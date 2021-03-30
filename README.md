@@ -95,9 +95,9 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 - Filebeat collects log events
-	- [Example Filebeat Data](https://github.com/lindseytwilson/Project-1/blob/main/Images/Sample%20Log%20Data.png)
+	- [Filebeat Data Example](https://github.com/lindseytwilson/Project-1/blob/main/Images/Sample%20Log%20Data.png)
 - Mectricbeat collects metrics and system statistics 
-	- [Example Metricbeat Data](https://github.com/lindseytwilson/Project-1/blob/main/Images/Sample%20Metricbeat%20Data.png)
+	- [Metricbeat Data Example](https://github.com/lindseytwilson/Project-1/blob/main/Images/Sample%20Metricbeat%20Data.png)
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
